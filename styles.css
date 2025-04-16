@@ -469,6 +469,19 @@ footer {
     border-radius: 5px;
 }
 
+.footer-newsletter .btn {
+    padding: 8px 15px;
+    font-size: 12px;
+    width: fit-content;
+    background: var(--secondary-color);
+    margin-top: 5px;
+}
+
+.footer-newsletter .btn:hover {
+    background: var(--white);
+    color: var(--secondary-color);
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 20px;
