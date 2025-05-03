@@ -17,6 +17,7 @@ The objectives of this Football Manager blog include:
 ## Tech Stack 💻
 
 ### Frontend
+
 - HTML5: Structure and content
 - CSS3: Styling and animations
 - JavaScript: Interactive elements and functionality
@@ -57,11 +58,13 @@ cd fm-journey-blogpage
 ## Customization 🛠️
 
 ### Adding New Articles
+
 1. Duplicate an existing article structure in `index.html`
 2. Update the content, title, image, and category
 3. Link it to a new article page based on the `article.html` template
 
 ### Creating New Article Pages
+
 1. Copy the `article.html` file and rename it
 2. Update the content sections, including:
    - Article title and meta information
@@ -71,6 +74,7 @@ cd fm-journey-blogpage
    - Related articles
 
 ### Modifying Styles
+
 1. Open `styles.css`
 2. Locate the section you want to modify
 3. Update the CSS properties as needed
@@ -78,6 +82,7 @@ cd fm-journey-blogpage
 ## Browser Compatibility 🌐
 
 This website is designed to work with all modern browsers, including:
+
 - Chrome
 - Firefox
 - Safari
@@ -96,4 +101,4 @@ This project is for demonstration purposes. Feel free to use and modify it for y
 
 ## Author 📚
 
-- David Mould 
+- David Mould
