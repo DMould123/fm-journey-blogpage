@@ -1,11 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tean Guides</title>
-</head>
-<body>
-<h1>Tean Guides...</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Guides - FM Journey</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .team-guides-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .team-guide-card {
+        background: var(--white);
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        transition: var(--transition);
+      }
+
+      .team-guide-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .team-guide-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .team-guide-card-content {
+        padding: 20px;
+      }
+
+      .team-guide-card h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: var(--primary-color);
+      }
+
+      .team-guide-card p {
+        font-size: 14px;
+        color: var(--dark-gray);
+        margin-bottom: 15px;
+      }
+
+      .team-guide-card a {
+        font-weight: 600;
+        color: var(--secondary-color);
+        text-decoration: none;
+      }
+
+      .team-guide-card a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body class="article-page">
+    <header>
+      <div class="logo">
+        <img src="./img/logo.jpg" alt="FM Journey Logo" class="logo-img" />
+        <div>
+          <h1>FM Journey</h1>
+          <p>Your Ultimate Football Manager Resource</p>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="article.html">Tactics</a></li>
+          <li><a href="wonderkids.html">Wonderkids</a></li>
+          <li><a href="teamguides.html" class="active">Team Guides</a></li>
+          <li><a href="#">Tips & Tricks</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="article-container">
+      <article>
+        <header class="article-header">
+          <h1>Team Guides</h1>
+          <p>
+            Explore detailed guides for managing your favorite teams in Football
+            Manager. From tactics to transfers, we've got you covered.
+          </p>
+        </header>
+
+        <div class="team-guides-list">
+          <div class="team-guide-card">
+            <img src="./img/newcastle.jpg" alt="Newcastle United" />
+            <div class="team-guide-card-content">
+              <h3>Newcastle United</h3>
+              <p>Build a European powerhouse with Newcastle United.</p>
+              <a href="newcastle.html">Read More</a>
+            </div>
+          </div>
+
+          <div class="team-guide-card">
+            <img src="./img/leeds.jpg" alt="Leeds United" />
+            <div class="team-guide-card-content">
+              <h3>Leeds United</h3>
+              <p>Return Leeds United to their former glory.</p>
+              <a href="leeds.html">Read More</a>
+            </div>
+          </div>
+
+          <div class="team-guide-card">
+            <img src="./img/acmilan.jpg" alt="AC Milan" />
+            <div class="team-guide-card-content">
+              <h3>AC Milan</h3>
+              <p>Revive the Rossoneri and dominate Serie A.</p>
+              <a href="acmilan.html">Read More</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <aside class="sidebar">
+      <div class="widget">
+        <h3>Subscribe to Newsletter</h3>
+        <p>Get the latest FM tactics and tips directly to your inbox!</p>
+        <form class="subscribe-form">
+          <input type="email" placeholder="Your email address" required />
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="widget">
+        <h3>Popular Categories</h3>
+        <ul class="categories">
+          <li><a href="#">Tactics</a></li>
+          <li><a href="#">Wonderkids</a></li>
+          <li><a href="#">Team Guides</a></li>
+          <li><a href="#">Training</a></li>
+          <li><a href="#">Scouting</a></li>
+        </ul>
+      </div>
+
+      <div class="widget">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-twitch"></i></a>
+          <a href="#"><i class="fab fa-discord"></i></a>
+        </div>
+      </div>
+    </aside>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>FM Journey</h2>
+          <p>Your Ultimate Football Manager Resource</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="article.html">Tactics</a></li>
+            <li><a href="wonderkids.html">Wonderkids</a></li>
+            <li><a href="teamguides.html">Team Guides</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h3>Stay Updated</h3>
+          <p>Subscribe to our newsletter for the latest FM guides and news</p>
+          <form>
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 FM Journey. All rights reserved.</p>
+        <p>
+          Football Manager is a trademark of Sports Interactive Limited. This
+          website is not affiliated with Sports Interactive or SEGA.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
