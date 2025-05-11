@@ -15,26 +15,27 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 20px;
         margin-top: 30px;
+        padding: 0 20px;
       }
 
       .team-guide-card {
-        background: var(--white);
+        background: #fff;
         border-radius: 8px;
-        box-shadow: var(--shadow);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         overflow: hidden;
-        transition: var(--transition);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
 
       .team-guide-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       }
 
       .team-guide-card img {
         width: 100%;
         height: 150px;
         object-fit: contain;
-        background-color: #f4f4f4;
+        background-color: #f9f9f9;
         padding: 10px;
         border-bottom: 1px solid #ddd;
       }
@@ -44,25 +45,125 @@
       }
 
       .team-guide-card h3 {
-        font-size: 20px;
-        margin-bottom: 10px;
+        font-size: 1.5rem;
         color: var(--primary-color);
+        margin-bottom: 10px;
       }
 
       .team-guide-card p {
-        font-size: 14px;
+        font-size: 1rem;
         color: var(--dark-gray);
         margin-bottom: 15px;
+        line-height: 1.5;
       }
 
       .team-guide-card a {
-        font-weight: 600;
+        font-weight: bold;
         color: var(--secondary-color);
         text-decoration: none;
+        transition: color 0.3s ease;
       }
 
       .team-guide-card a:hover {
+        color: var(--primary-color);
         text-decoration: underline;
+      }
+
+      .sidebar {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .sidebar .widget {
+        margin-bottom: 30px;
+      }
+
+      .sidebar .widget h3 {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+      }
+
+      .sidebar .widget p {
+        font-size: 1rem;
+        color: var(--dark-gray);
+        line-height: 1.6;
+      }
+
+      .sidebar .categories li {
+        margin-bottom: 10px;
+      }
+
+      .sidebar .categories li a {
+        text-decoration: none;
+        color: var(--secondary-color);
+        transition: color 0.3s ease;
+      }
+
+      .sidebar .categories li a:hover {
+        color: var(--primary-color);
+      }
+
+      .footer-content {
+        background-color: #f4f4f4;
+        padding: 20px;
+        text-align: center;
+        border-top: 1px solid #ddd;
+      }
+
+      .footer-content h3 {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+      }
+
+      .footer-content ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-content ul li {
+        margin: 5px 0;
+      }
+
+      .footer-content ul li a {
+        text-decoration: none;
+        color: var(--secondary-color);
+      }
+
+      .footer-content ul li a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-bottom {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+        font-size: 0.9rem;
+      }
+
+      .article-header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 20px;
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .article-header h1 {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+      }
+
+      .article-header p {
+        font-size: 1.2rem;
+        color: var(--dark-gray);
+        line-height: 1.6;
       }
     </style>
   </head>
