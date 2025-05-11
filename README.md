@@ -51,7 +51,7 @@ cd fm-journey-blogpage
 ## Project Structure 📁
 
 - `index.html` - The homepage with featured and latest articles
-- `article.html` - A sample detailed article page
+- `tactics.html` - A sample detailed article page
 - `styles.css` - All the styling for the website
 - `script.js` - JavaScript functionality for interactive elements
 
@@ -61,11 +61,11 @@ cd fm-journey-blogpage
 
 1. Duplicate an existing article structure in `index.html`
 2. Update the content, title, image, and category
-3. Link it to a new article page based on the `article.html` template
+3. Link it to a new article page based on the `tactics.html` template
 
 ### Creating New Article Pages
 
-1. Copy the `article.html` file and rename it
+1. Copy the `tactics.html` file and rename it
 2. Update the content sections, including:
    - Article title and meta information
    - Featured image
