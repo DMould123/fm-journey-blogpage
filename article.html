@@ -10,7 +10,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <style>
-
       body.article-page {
         grid-template-areas:
           "header header"
@@ -18,7 +17,6 @@
           "footer footer";
         grid-template-rows: auto 1fr auto;
       }
-
 
       .article-container {
         grid-area: article;
@@ -31,7 +29,6 @@
       bar {
         grid-area: sidebar;
       }
-
 
       .article-header .category {
         margin-bottom: 20px;
@@ -46,7 +43,9 @@
         display: flex;
         flex-wrap: wrap;
 
-      .side        color: var(--dark-gray);
+        .side {
+          color: var(--dark-gray);
+        }
         font-size: 13px;
         margin: 20px 0 0 0;
       }
