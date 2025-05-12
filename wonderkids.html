@@ -36,22 +36,37 @@
         margin-bottom: 30px;
       }
 
+      .article-header h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        line-height: 1.4;
+        color: var(--text-color);
+        word-wrap: break-word;
+      }
+
       .article-meta {
         display: flex;
         flex-wrap: wrap;
         gap: 15px;
+        font-size: 14px;
+        margin-top: 0;
         color: var(--dark-gray);
-        font-size: 13px;
-        margin: 20px 0 0 0;
+        width: 100%;
       }
 
       .article-meta span {
-        display: inline-flex;
+        display: flex;
         align-items: center;
+        gap: 8px;
+        padding: 6px 12px;
+        background: var(--light-gray);
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
 
       .article-meta i {
         margin-right: 5px;
+        color: var(--primary-color);
       }
 
       .article-featured-img {
@@ -147,13 +162,12 @@
     <main class="article-container">
       <article>
         <div class="article-header">
-          <span class="category">Wonderkids Guide</span>
           <h1>FM24 Wonderkids Guide: Best Young Players to Sign</h1>
-          <div class="article-meta">
-            <span><i class="fas fa-calendar"></i> April 16, 2024</span>
-            <span><i class="fas fa-user"></i> David Mould</span>
-            <span><i class="fas fa-clock"></i> 15 min read</span>
-          </div>
+          <header class="article-meta">
+            <span><i class="fas fa-user"></i>Jon Doe</span>
+            <span><i class="fas fa-calendar"></i>April 16, 2024</span>
+            <span><i class="fas fa-clock"></i>15 min read</span>
+          </header>
         </div>
 
         <div class="article-featured-img">

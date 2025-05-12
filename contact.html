@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us - FM Journey</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body.article-page {
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "article sidebar"
+          "footer footer";
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: auto 1fr auto;
+      }
+
+      .article-container {
+        grid-area: article;
+      }
+
+      .sidebar {
+        grid-area: sidebar;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -23,8 +46,9 @@
           <li><a href="tactics.html">Tactics</a></li>
           <li><a href="wonderkids.html">Wonderkids</a></li>
           <li><a href="teamguides.html">Team Guides</a></li>
-          <li><a href="tips.html">Tips & Tricks</a></li>
+          <li><a href="tipsandtricks.html">Tips & Tricks</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
