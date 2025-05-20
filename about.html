@@ -10,8 +10,114 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <style>
+      body.article-page {
+        grid-template-areas:
+          "header header"
+          "article sidebar"
+          "footer footer";
+        grid-template-rows: auto 1fr auto;
+      }
+      .article-container {
+        grid-area: article;
+        background: var(--white);
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+      }
+      .sidebar {
+        grid-area: sidebar;
+      }
+      .article-header {
+        margin-bottom: 30px;
+      }
+      .article-header h1 {
+        font-size: 36px;
+        margin-bottom: 15px;
+        line-height: 1.3;
+        color: var(--text-color);
+      }
+      .article-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        font-size: 14px;
+        margin-top: 0;
+        color: var(--dark-gray);
+        width: 100%;
+      }
+      .article-meta span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 12px;
+        background: var(--light-gray);
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .article-meta i {
+        margin-right: 5px;
+        color: var(--primary-color);
+      }
+      .article-featured-img {
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 8px;
+        margin-bottom: 30px;
+      }
+      .article-featured-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .article-content {
+        font-size: 16px;
+        line-height: 1.8;
+      }
+      .article-content p,
+      .article-content ul,
+      .article-content ol,
+      .article-content blockquote {
+        margin-bottom: 20px;
+      }
+      .article-content h2 {
+        font-size: 28px;
+        color: var(--primary-color);
+        margin: 30px 0 15px;
+      }
+      .article-content h3 {
+        font-size: 22px;
+        color: var(--secondary-color);
+        margin: 25px 0 10px;
+      }
+      .author-box {
+        display: flex;
+        align-items: center;
+        background: var(--light-gray);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 40px;
+      }
+      .author-avatar {
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        margin-right: 15px;
+        border-radius: 50%;
+      }
+      .author-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .author-bio h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+    </style>
   </head>
-  <body>
+  <body class="article-page">
     <header>
       <div class="logo">
         <a href="index.html">
@@ -39,62 +145,90 @@
       </nav>
     </header>
 
-    <main class="about-container">
-      <section class="about-header">
-        <h2>About FM Journey</h2>
-        <p>
-          Welcome to FM Journey, your ultimate resource for everything Football
-          Manager! Whether you're a seasoned veteran or a newcomer to the game,
-          our goal is to provide you with the tools, tips, and tactics you need
-          to dominate the digital dugout.
-        </p>
-      </section>
+    <main class="article-container">
+      <article>
+        <header class="article-header">
+          <h1>About FM Journey</h1>
+          <div class="article-meta">
+            <span><i class="fas fa-users"></i> FM Journey</span>
+            <span><i class="fas fa-calendar"></i> May 2025</span>
+          </div>
+        </header>
 
-      <section class="about-content">
-        <h3>Our Mission</h3>
-        <p>
-          At FM Journey, we aim to create a vibrant community of Football
-          Manager enthusiasts. We strive to deliver high-quality content,
-          including tactical guides, wonderkid recommendations, team-building
-          strategies, and much more.
-        </p>
+        <div class="article-featured-img">
+          <img
+            src="https://res.cloudinary.com/dele4dvi9/image/upload/v1747218454/FM/logo_zs8pnv.jpg"
+            alt="FM Journey Logo"
+          />
+        </div>
 
-        <h3>What We Offer</h3>
-        <ul>
-          <li>
-            <strong>Tactical Guides:</strong> Master the art of football
-            management with our in-depth tactical breakdowns.
-          </li>
-          <li>
-            <strong>Wonderkid Spotlights:</strong> Discover the next generation
-            of football superstars.
-          </li>
-          <li>
-            <strong>Team Guides:</strong> Learn how to take your favorite club
-            to the next level.
-          </li>
-          <li>
-            <strong>Tips & Tricks:</strong> Get the edge over your competition
-            with our expert advice.
-          </li>
-        </ul>
+        <div class="article-content">
+          <p>
+            Welcome to FM Journey, your ultimate resource for everything
+            Football Manager! Whether you're a seasoned veteran or a newcomer to
+            the game, our goal is to provide you with the tools, tips, and
+            tactics you need to dominate the digital dugout.
+          </p>
 
-        <h3>Meet the Team</h3>
-        <p>
-          FM Journey is run by a group of passionate Football Manager players
-          who have spent countless hours perfecting tactics, scouting players,
-          and building championship-winning teams. We're here to share our
-          knowledge and help you achieve success in your FM career.
-        </p>
+          <h2>Our Mission</h2>
+          <p>
+            At FM Journey, we aim to create a vibrant community of Football
+            Manager enthusiasts. We strive to deliver high-quality content,
+            including tactical guides, wonderkid recommendations, team-building
+            strategies, and much more.
+          </p>
 
-        <h3>Join the Community</h3>
-        <p>
-          Follow us on social media and subscribe to our newsletter to stay
-          updated with the latest FM tips, tactics, and news. Let's build a
-          community of Football Manager enthusiasts together!
-        </p>
-      </section>
+          <h2>What We Offer</h2>
+          <ul>
+            <li>
+              <strong>Tactical Guides:</strong> Master the art of football
+              management with our in-depth tactical breakdowns.
+            </li>
+            <li>
+              <strong>Wonderkid Spotlights:</strong> Discover the next
+              generation of football superstars.
+            </li>
+            <li>
+              <strong>Team Guides:</strong> Learn how to take your favorite club
+              to the next level.
+            </li>
+            <li>
+              <strong>Tips & Tricks:</strong> Get the edge over your competition
+              with our expert advice.
+            </li>
+          </ul>
+
+          <h2>Meet the Team</h2>
+          <p>
+            FM Journey is run by a group of passionate Football Manager players
+            who have spent countless hours perfecting tactics, scouting players,
+            and building championship-winning teams. We're here to share our
+            knowledge and help you achieve success in your FM career.
+          </p>
+
+          <div class="author-box">
+            <div class="author-avatar">
+              <img src="./img/avatar.png" alt="FM Journey Team" />
+            </div>
+            <div class="author-bio">
+              <h3>FM Journey Team</h3>
+              <p>
+                A collective of Football Manager enthusiasts, sharing tips,
+                guides, and strategies to help you succeed in your FM career.
+              </p>
+            </div>
+          </div>
+
+          <h2>Join the Community</h2>
+          <p>
+            Follow us on social media and subscribe to our newsletter to stay
+            updated with the latest FM tips, tactics, and news. Let's build a
+            community of Football Manager enthusiasts together!
+          </p>
+        </div>
+      </article>
     </main>
+
     <aside class="sidebar">
       <div class="widget">
         <h3>Subscribe to Newsletter</h3>
