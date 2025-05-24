@@ -11,11 +11,43 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <style>
+      body.article-page {
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "article sidebar"
+          "footer footer";
+        grid-template-columns: 1fr 350px;
+        grid-template-rows: auto 1fr auto;
+        align-items: start;
+        min-height: 100vh;
+        background: var(--background, #f7f7f7);
+      }
+      header {
+        grid-area: header;
+      }
+      .article-container {
+        grid-area: article;
+        background: var(--white);
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: var(--shadow, 0 2px 8px rgba(0, 0, 0, 0.04));
+        margin: 30px 0;
+      }
+      aside.sidebar {
+        grid-area: sidebar;
+        margin-top: 30px;
+        padding: 0 20px;
+        background: var(--light-gray);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        align-self: start;
+      }
       .article-header {
         margin-bottom: 30px;
       }
       .article-header h1 {
-        font-size: 28px;
+        font-size: 30px;
         margin-bottom: 15px;
         line-height: 1.3;
         color: var(--text-color);
@@ -68,6 +100,40 @@
         font-size: 16px;
         line-height: 1.8;
       }
+      .widget {
+        margin-bottom: 20px;
+      }
+      .widget h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: var(--text-color);
+      }
+      .subscribe-form {
+        display: flex;
+        gap: 10px;
+      }
+      .subscribe-form input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid var(--dark-gray);
+        border-radius: 5px;
+      }
+      .categories {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .categories li {
+        margin-bottom: 8px;
+      }
+      .categories a {
+        text-decoration: none;
+        color: var(--primary-color);
+      }
+
+      footer {
+        grid-area: footer;
+      }
     </style>
   </head>
   <body class="article-page">
@@ -98,60 +164,131 @@
       </nav>
     </header>
 
-    <main class="article-container">
-      <article>
-        <header class="article-header">
-          <div style="display: flex; align-items: center; gap: 18px">
+    <div style="display: contents">
+      <main class="article-container">
+        <article>
+          <header class="article-header">
+            <div style="display: flex; align-items: center; gap: 18px">
+              <img
+                src="https://res.cloudinary.com/dele4dvi9/image/upload/v1747390990/FM/Leeds_United_F.C._logo_s45gz0.webp"
+                alt="Leeds United Logo"
+                style="height: 48px; width: 48px"
+              />
+              <h1>Leeds United: Reviving the Glory Days</h1>
+            </div>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> Jon Doe</span>
+              <span><i class="fas fa-calendar"></i> May 2025</span>
+              <span><i class="fas fa-clock"></i>8 min read</span>
+            </div>
+          </header>
+
+          <div class="article-featured-img">
             <img
-              src="https://res.cloudinary.com/dele4dvi9/image/upload/v1747390990/FM/Leeds_United_F.C._logo_s45gz0.webp"
-              alt="Leeds United Logo"
-              style="height: 56px; width: 56px"
+              src="https://res.cloudinary.com/dele4dvi9/image/upload/v1748098849/FM/c4675320-283c-11f0-b5a0-212f3662e1cf_fxjscc.jpg"
+              alt="Leeds United Banner"
             />
-            <h1>Leeds United: Reviving the Glory Days</h1>
           </div>
-          <div class="article-meta">
-            <span><i class="fas fa-user"></i> Jon Doe</span>
-            <span><i class="fas fa-calendar"></i> May 2025</span>
-            <span><i class="fas fa-clock"></i>8 min read</span>
+
+          <div class="article-content">
+            <p>
+              A detailed guide to restoring Leeds United to its former glory in
+              Football Manager.
+            </p>
+            <h2>Squad Overview</h2>
+            <p>
+              Leeds has a mix of young talent and experienced players. Focus on
+              improving the defense and adding creativity in midfield.
+            </p>
+
+            <h2>Tactical Recommendations</h2>
+            <p>
+              Employ a high-intensity 4-2-3-1 formation to capitalize on the
+              team's work rate and attacking potential.
+            </p>
+
+            <h2>Transfer Targets</h2>
+            <ul>
+              <li>
+                <img
+                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  alt="James Ward-Prowse"
+                  style="
+                    height: 24px;
+                    width: 24px;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                    margin-right: 8px;
+                  "
+                />
+                <strong>James Ward-Prowse:</strong> A set-piece specialist and
+                midfield leader.
+              </li>
+              <li>
+                <img
+                  src="https://randomuser.me/api/portraits/men/33.jpg"
+                  alt="Max Aarons"
+                  style="
+                    height: 24px;
+                    width: 24px;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                    margin-right: 8px;
+                  "
+                />
+                <strong>Max Aarons:</strong> A dynamic right-back option.
+              </li>
+              <li>
+                <img
+                  src="https://randomuser.me/api/portraits/men/34.jpg"
+                  alt="Adam Hložek"
+                  style="
+                    height: 24px;
+                    width: 24px;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                    margin-right: 8px;
+                  "
+                />
+                <strong>Adam Hložek:</strong> A versatile attacking player.
+              </li>
+            </ul>
           </div>
-        </header>
+        </article>
+      </main>
 
-        <div class="article-featured-img">
-          <img
-            src="https://res.cloudinary.com/dele4dvi9/image/upload/v1748098849/FM/c4675320-283c-11f0-b5a0-212f3662e1cf_fxjscc.jpg"
-            alt="Leeds United Banner"
-          />
+    <aside class="sidebar">
+      <div class="widget">
+        <h3>Subscribe to Newsletter</h3>
+        <p>Get the latest FM tactics and tips directly to your inbox!</p>
+        <form class="subscribe-form">
+          <input type="email" placeholder="Your email address" required />
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="widget">
+        <h3>Popular Categories</h3>
+        <ul class="categories">
+          <li><a href="tactics.html">Tactics</a></li>
+          <li><a href="wonderkids.html">Wonderkids</a></li>
+          <li><a href="teamguides.html">Team Guides</a></li>
+          <li><a href="#">Training</a></li>
+          <li><a href="#">Scouting</a></li>
+        </ul>
+      </div>
+
+      <div class="widget">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-twitch"></i></a>
+          <a href="#"><i class="fab fa-discord"></i></a>
         </div>
-
-        <div class="article-content">
-          <p>
-            A detailed guide to restoring Leeds United to its former glory in
-            Football Manager.
-          </p>
-          <h2>Squad Overview</h2>
-          <p>
-            Leeds has a mix of young talent and experienced players. Focus on
-            improving the defense and adding creativity in midfield.
-          </p>
-
-          <h2>Tactical Recommendations</h2>
-          <p>
-            Employ a high-intensity 4-2-3-1 formation to capitalize on the
-            team's work rate and attacking potential.
-          </p>
-
-          <h2>Transfer Targets</h2>
-          <ul>
-            <li>
-              <strong>James Ward-Prowse:</strong> A set-piece specialist and
-              midfield leader.
-            </li>
-            <li><strong>Max Aarons:</strong> A dynamic right-back option.</li>
-            <li><strong>Adam Hložek:</strong> A versatile attacking player.</li>
-          </ul>
-        </div>
-      </article>
-    </main>
+      </div>
+    </aside>
 
     <footer>
       <div class="footer-content">
