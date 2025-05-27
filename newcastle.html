@@ -6,15 +6,146 @@
     <title>Newcastle United Guide - FM Journey</title>
     <link rel="icon" type="image/png" href="/img/logo.png" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body.article-page {
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "article sidebar"
+          "footer footer";
+        grid-template-columns: 1fr 350px;
+        grid-template-rows: auto 1fr auto;
+        align-items: start;
+        min-height: 100vh;
+        background: var(--background, #f7f7f7);
+      }
+      header {
+        grid-area: header;
+      }
+      .article-container {
+        grid-area: article;
+        background: var(--white);
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: var(--shadow, 0 2px 8px rgba(0, 0, 0, 0.04));
+        margin: 30px 0;
+      }
+      aside.sidebar {
+        grid-area: sidebar;
+        margin-top: 30px;
+        padding: 0 20px;
+        background: var(--light-gray);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        align-self: start;
+      }
+      .article-header {
+        margin-bottom: 30px;
+      }
+      .article-header h1 {
+        font-size: 30px;
+        margin-bottom: 15px;
+        line-height: 1.3;
+        color: var(--text-color);
+      }
+      .article-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        font-size: 14px;
+        margin-top: 0;
+        color: var(--dark-gray);
+        width: 100%;
+      }
+      .article-meta span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 12px;
+        background: var(--light-gray);
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .article-meta i {
+        margin-right: 5px;
+        color: var(--primary-color);
+      }
+      .article-featured-img {
+        width: 100%;
+        max-width: 1600px;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        min-height: 300px;
+        margin-bottom: 30px;
+        background: var(--light-gray);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .article-featured-img img {
+        width: 100%;
+        height: 100%;
+        max-width: 1600px;
+        max-height: 900px;
+        object-fit: cover;
+        display: block;
+      }
+      .article-content {
+        font-size: 16px;
+        line-height: 1.8;
+      }
+      .widget {
+        margin-bottom: 20px;
+      }
+      .widget h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: var(--text-color);
+      }
+      .subscribe-form {
+        display: flex;
+        gap: 10px;
+      }
+      .subscribe-form input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid var(--dark-gray);
+        border-radius: 5px;
+      }
+      .categories {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .categories li {
+        margin-bottom: 8px;
+      }
+      .categories a {
+        text-decoration: none;
+        color: var(--primary-color);
+      }
+
+      footer {
+        grid-area: footer;
+      }
+    </style>
   </head>
   <body class="article-page">
     <header>
       <div class="logo">
-        <img
-          src="https://res.cloudinary.com/dele4dvi9/image/upload/v1747218454/FM/logo_zs8pnv.jpg"
-          alt="FM Journey Logo"
-          class="logo-img"
-        />
+        <a href="index.html">
+          <img
+            src="https://res.cloudinary.com/dele4dvi9/image/upload/v1747218454/FM/logo_zs8pnv.jpg"
+            alt="FM Journey Logo"
+            class="logo-img"
+          />
+        </a>
         <div>
           <h1>FM Journey</h1>
           <p>Your Ultimate Football Manager Resource</p>
@@ -25,46 +156,151 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="tactics.html">Tactics</a></li>
           <li><a href="wonderkids.html">Wonderkids</a></li>
-          <li><a href="teamguides.html" class="active">Team Guides</a></li>
-          <li><a href="#">Tips & Tricks</a></li>
+          <li><a href="teamguides.html">Team Guides</a></li>
+          <li><a href="tipsandtricks.html">Tips & Tricks</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="article-container">
-      <article>
-        <header class="article-header">
-          <h1>Newcastle United: Building a European Powerhouse</h1>
-          <p>
-            A comprehensive guide to transforming Newcastle United into a
-            Champions League contender.
-          </p>
-        </header>
+    <div style="display: contents">
+      <main class="article-container">
+        <article>
+          <header class="article-header">
+            <div style="display: flex; align-items: center; gap: 18px">
+              <img
+                src="https://res.cloudinary.com/dele4dvi9/image/upload/v1747391053/FM/Newcastle_United_Logo_s3jjwn.webp"
+                alt="Newcastle UnitedLogo"
+                style="height: 48px; width: 48px"
+              />
+              <h1>Newcastle United: Building a European Powerhouse</h1>
+            </div>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> Jon Doe</span>
+              <span><i class="fas fa-calendar"></i> May 2025</span>
+              <span><i class="fas fa-clock"></i>8 min read</span>
+            </div>
+          </header>
 
-        <div class="article-content">
-          <h2>Squad Overview</h2>
-          <p>
-            Newcastle boasts a strong squad with key players like Bruno
-            Guimarães and Alexander Isak. Focus on strengthening the defense and
-            adding depth to the midfield.
-          </p>
+          <div class="article-featured-img">
+            <img
+              src="https://res.cloudinary.com/dele4dvi9/image/upload/v1748341090/FM/newcastle-huddle_t5vfxwnu_qasmah.avif"
+              alt="Newcastle United Banner"
+            />
+          </div>
 
-          <h2>Tactical Recommendations</h2>
-          <p>
-            Use a 4-3-3 formation with a high press to maximize the team's
-            attacking potential. Emphasize quick transitions and wide play.
-          </p>
+          <div class="article-content">
+            <p>
+              Use a 4-3-3 formation with a high press to maximize the team's
+              attacking potential. Emphasize quick transitions and wide play.
+            </p>
 
-          <h2>Transfer Targets</h2>
-          <ul>
-            <li><strong>Josko Gvardiol:</strong> A solid defensive option.</li>
-            <li><strong>Jude Bellingham:</strong> A versatile midfielder.</li>
-            <li><strong>Rasmus Højlund:</strong> A promising young striker.</li>
+            <h2>Suggested Best Formation</h2>
+            <p>
+              <strong>4-3-3 DM Wide:</strong><br />
+              <a
+                href="https://www.youtube.com/watch?v=Vq3Cq2fft80"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="https://res.cloudinary.com/dele4dvi9/image/upload/v1748341232/FM/hq720_smkvem.jpg"
+                  alt="4-3-3 Formation"
+                  style="max-width: 220px; display: block; margin: 10px 0"
+                />
+              </a>
+              <br />
+              A balanced system that allows for strong pressing, wide overloads,
+              and quick transitions—perfect for Newcastle's high-energy squad.
+            </p>
+
+            <h2>Squad Overview</h2>
+            <p>
+              Newcastle boasts a strong spine with stars like Bruno Guimarães,
+              Sven Botman, and Alexander Isak. Focus on improving squad depth,
+              especially in central midfield and full-back roles. Youth
+              prospects like Lewis Miley also offer long-term potential.
+            </p>
+
+            <h2>Tactical Recommendations</h2>
+            <p>
+              Play with intensity and directness. Use a 4-3-3 or 4-2-3-1 with
+              inverted wingers and aggressive wingbacks to fully utilize the
+              squad's physical and technical strengths.
+            </p>
+
+            <h2>Transfer Targets</h2>
+            <ul>
+              <li>
+                <img
+                  src="https://res.cloudinary.com/dele4dvi9/image/upload/v1748341717/FM/2000062512_cv77by.webp"
+                  alt="Arnau Martinez"
+                  width="80"
+                  style="border-radius: 8px; margin-right: 10px"
+                />
+                <strong>Arnau Martínez</strong> <em>(Right-Back)</em>:
+                Technically gifted full-back who can slot into an inverted role
+                or provide width.
+              </li>
+              <li>
+                <img
+                  src="https://res.cloudinary.com/dele4dvi9/image/upload/v1748342063/FM/24065108_v7lw9g.webp"
+                  alt="Martin Baturina"
+                  width="80"
+                  style="border-radius: 8px; margin-right: 10px"
+                />
+                <strong>Martin Baturina</strong> <em>(Central Midfielder)</em>:
+                Technically gifted playmaker from Dinamo Zagreb, capable of
+                dictating tempo and picking passes under pressure.
+              </li>
+              <li>
+                <img
+                  src="https://res.cloudinary.com/dele4dvi9/image/upload/v1748341792/FM/12093353_eleeuo.webp"
+                  alt="Karim Konaté"
+                  width="80"
+                  style="border-radius: 8px; margin-right: 10px"
+                />
+                <strong>Karim Konaté</strong> <em>(Striker)</em>: Young,
+                physical, and clinical in front of goal—an ideal rotational
+                option or future Isak replacement.
+              </li>
+            </ul>
+          </div>
+        </article>
+      </main>
+
+      <aside class="sidebar">
+        <div class="widget">
+          <h3>Subscribe to Newsletter</h3>
+          <p>Get the latest FM tactics and tips directly to your inbox!</p>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+        <div class="widget">
+          <h3>Popular Categories</h3>
+          <ul class="categories">
+            <li><a href="tactics.html">Tactics</a></li>
+            <li><a href="wonderkids.html">Wonderkids</a></li>
+            <li><a href="teamguides.html">Team Guides</a></li>
+            <li><a href="#">Training</a></li>
+            <li><a href="#">Scouting</a></li>
           </ul>
         </div>
-      </article>
-    </main>
+        <div class="widget">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitch"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+      </aside>
+    </div>
 
     <footer>
       <div class="footer-content">
