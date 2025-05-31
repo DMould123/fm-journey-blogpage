@@ -6,6 +6,135 @@
     <title>Schalke 04 Guide - FM Journey</title>
     <link rel="icon" type="image/png" href="/img/logo.png" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body.article-page {
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "article sidebar"
+          "footer footer";
+        grid-template-columns: 1fr 350px;
+        grid-template-rows: auto 1fr auto;
+        align-items: start;
+        min-height: 100vh;
+        background: var(--background, #f7f7f7);
+      }
+      header {
+        grid-area: header;
+      }
+      .article-container {
+        grid-area: article;
+        background: var(--white);
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: var(--shadow, 0 2px 8px rgba(0, 0, 0, 0.04));
+        margin: 30px 0;
+      }
+      aside.sidebar {
+        grid-area: sidebar;
+        margin-top: 30px;
+        padding: 0 20px;
+        background: var(--light-gray);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        align-self: start;
+      }
+      .article-header {
+        margin-bottom: 30px;
+      }
+      .article-header h1 {
+        font-size: 30px;
+        margin-bottom: 15px;
+        line-height: 1.3;
+        color: var(--text-color);
+      }
+      .article-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        font-size: 14px;
+        margin-top: 0;
+        color: var(--dark-gray);
+        width: 100%;
+      }
+      .article-meta span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 12px;
+        background: var(--light-gray);
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .article-meta i {
+        margin-right: 5px;
+        color: var(--primary-color);
+      }
+      .article-featured-img {
+        width: 100%;
+        max-width: 1600px;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        min-height: 300px;
+        margin-bottom: 30px;
+        background: var(--light-gray);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .article-featured-img img {
+        width: 100%;
+        height: 100%;
+        max-width: 1600px;
+        max-height: 900px;
+        object-fit: cover;
+        display: block;
+      }
+      .article-content {
+        font-size: 16px;
+        line-height: 1.8;
+      }
+      .widget {
+        margin-bottom: 20px;
+      }
+      .widget h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: var(--text-color);
+      }
+      .subscribe-form {
+        display: flex;
+        gap: 10px;
+      }
+      .subscribe-form input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid var(--dark-gray);
+        border-radius: 5px;
+      }
+      .categories {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .categories li {
+        margin-bottom: 8px;
+      }
+      .categories a {
+        text-decoration: none;
+        color: var(--primary-color);
+      }
+
+      footer {
+        grid-area: footer;
+      }
+    </style>
   </head>
   <body class="article-page">
     <header>
@@ -35,155 +164,134 @@
       </nav>
     </header>
 
-    <main class="article-container">
-      <article>
-        <header class="article-header">
-          <h1>Schalke 04: Restoring Royal Blue Dominance</h1>
-          <p>
-            A comprehensive Football Manager guide for rebuilding Schalke 04 and
-            climbing back to Bundesliga greatness.
-          </p>
-        </header>
+    <div style="display: contents">
+      <main class="article-container">
+        <article>
+          <header class="article-header">
+            <div style="display: flex; align-items: center; gap: 18px">
+              <img
+                src="https://sortitoutsi.net/file/5/logo/medium/5.png"
+                alt="Schalke 04 Logo"
+                style="height: 48px; width: 48px"
+              />
+              <h1>Schalke 04: Restoring Royal Blue Dominance</h1>
+            </div>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> Jon Doe</span>
+              <span><i class="fas fa-calendar"></i> May 2025</span>
+              <span><i class="fas fa-clock"></i>8 min read</span>
+            </div>
+          </header>
 
-        <div class="article-content">
-          <h2>Squad Overview</h2>
-          <p>
-            Schalke 04 begin in the 2. Bundesliga but remain one of Germany's
-            most historic clubs. The squad includes experienced veterans and
-            emerging talent, but lacks depth in several key areas — especially
-            defense and central midfield. Leadership and morale are mixed due to
-            recent relegations.
-          </p>
+          <div class="article-featured-img">
+            <img
+              src="https://sortitoutsi.net/file/5/stadium/medium/5.png"
+              alt="Schalke 04 Stadium"
+            />
+          </div>
 
-          <h2>Preferred Formation</h2>
-          <p>
-            A 4-2-3-1 Wide or 4-3-3 DM Wide offers a solid foundation. The team
-            performs well in a structured, high-press system with quick
-            transitions.
-          </p>
-          <ul>
-            <li>
-              <strong>Goalkeeper:</strong> Focus on consistent shot-stopping —
-              experience preferred.
-            </li>
-            <li>
-              <strong>Full-backs:</strong> Modern, overlapping full-backs add
-              width to attacks.
-            </li>
-            <li>
-              <strong>Wingers:</strong> Inverted wingers suit players like Kenan
-              Karaman or a signing like Kristijan Bistrović.
-            </li>
-            <li>
-              <strong>Striker:</strong> Use a Target Forward or Pressing Forward
-              up top — Terodde fits this role well in early seasons.
-            </li>
-          </ul>
+          <div class="article-content">
+            <p>
+              A comprehensive Football Manager guide for rebuilding Schalke 04 and
+              climbing back to Bundesliga greatness.
+            </p>
 
-          <h2>Key Players</h2>
-          <ul>
-            <li>
-              <strong>Simon Terodde:</strong> A goal machine in the 2.
-              Bundesliga. Ageing, but crucial for promotion.
-            </li>
-            <li>
-              <strong>Thomas Ouwejan:</strong> Dynamic left-back with great
-              crossing ability. Needs defensive cover.
-            </li>
-            <li>
-              <strong>Danny Latza:</strong> Veteran midfielder and club captain.
-              Good for leadership but may need replacing soon.
-            </li>
-            <li>
-              <strong>Kenan Karaman:</strong> Versatile attacker who can play
-              wide or centrally.
-            </li>
-          </ul>
+            <h2>Suggested Best Formation</h2>
+            <p>
+              <strong>4-2-3-1 Wide:</strong><br />
+              <a
+                href="https://www.youtube.com/watch?v=Vq3Cq2fft80"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="https://sortitoutsi.net/file/5/tactics/medium/5.png"
+                  alt="4-2-3-1 Formation"
+                  style="max-width: 220px; display: block; margin: 10px 0"
+                />
+              </a>
+              <br />
+              A balanced system that allows for strong pressing, wide overloads,
+              and quick transitions—perfect for Schalke's high-energy squad.
+            </p>
 
-          <h2>Transfer Recommendations</h2>
-          <h3>Incomings</h3>
-          <ul>
-            <li>
-              <strong>Kristijan Bistrović (CM/CAM):</strong> On loan from CSKA.
-              Make his move permanent if he fits your system.
-            </li>
-            <li>
-              <strong>Tom Rothe (LB - Loan):</strong> Great option to back up or
-              rotate with Ouwejan.
-            </li>
-            <li>
-              <strong>Nnamdi Collins (CB - Borussia Dortmund):</strong> Great
-              loan option or cheap buy with high upside.
-            </li>
-            <li>
-              <strong>Arvin Appiah (RW):</strong> Cheap, pacy option from
-              Almería or on loan — adds directness to attack.
-            </li>
-          </ul>
+            <h2>Squad Overview</h2>
+            <p>
+              Schalke 04 begin in the 2. Bundesliga but remain one of Germany's
+              most historic clubs. The squad includes experienced veterans and
+              emerging talent, but lacks depth in several key areas — especially
+              defense and central midfield. Leadership and morale are mixed due to
+              recent relegations.
+            </p>
 
-          <h3>Outgoings</h3>
-          <ul>
-            <li>
-              <strong>Marcin Kamiński:</strong> Consider moving on for younger,
-              more mobile CBs.
-            </li>
-            <li>
-              <strong>Dominick Drexler:</strong> Ageing and not essential —
-              could free wages.
-            </li>
-          </ul>
+            <h2>Transfer Targets</h2>
+            <ul>
+              <li>
+                <img
+                  src="https://sortitoutsi.net/file/5/players/medium/5.png"
+                  alt="Kristijan Bistrović"
+                  width="80"
+                  style="border-radius: 8px; margin-right: 10px"
+                />
+                <strong>Kristijan Bistrović</strong> <em>(CM/CAM)</em>: On loan from CSKA.
+                Make his move permanent if he fits your system.
+              </li>
+              <li>
+                <img
+                  src="https://sortitoutsi.net/file/5/players/medium/5.png"
+                  alt="Tom Rothe"
+                  width="80"
+                  style="border-radius: 8px; margin-right: 10px"
+                />
+                <strong>Tom Rothe</strong> <em>(LB - Loan)</em>: Great option to back up or
+                rotate with Ouwejan.
+              </li>
+              <li>
+                <img
+                  src="https://sortitoutsi.net/file/5/players/medium/5.png"
+                  alt="Nnamdi Collins"
+                  width="80"
+                  style="border-radius: 8px; margin-right: 10px"
+                />
+                <strong>Nnamdi Collins</strong> <em>(CB - Borussia Dortmund)</em>: Great
+                loan option or cheap buy with high upside.
+              </li>
+            </ul>
+          </div>
+        </article>
+      </main>
 
-          <h2>Youth Prospects to Develop</h2>
-          <ul>
-            <li>
-              <strong>Assan Ouédraogo:</strong> One of the best midfield talents
-              in Germany — build around him!
-            </li>
-            <li>
-              <strong>Mehmet Aydin:</strong> Can develop into a solid right-back
-              or wing-back.
-            </li>
-            <li>
-              <strong>Leo Greiml:</strong> Young defender with solid potential —
-              worth giving minutes.
-            </li>
-          </ul>
-
-          <h2>Tactical Tips</h2>
-          <ul>
-            <li>
-              Use <strong>high pressing and gegenpressing</strong> against
-              weaker sides.
-            </li>
-            <li>
-              Switch to <strong>cautious or balanced</strong> when facing
-              top-tier sides or away games.
-            </li>
-            <li>
-              Encourage overlaps and attacking full-backs to create wide
-              overloads.
-            </li>
-            <li>
-              Focus training on team cohesion — you’ll need strong chemistry to
-              challenge for promotion.
-            </li>
-          </ul>
-
-          <h2>Objectives</h2>
-          <ol>
-            <li>
-              Secure top 3 finish in first season, ideally promotion via top 2.
-            </li>
-            <li>Rebuild squad depth and reduce wage bill.</li>
-            <li>Gradually integrate youth players like Ouédraogo.</li>
-            <li>
-              Develop a long-term tactical identity — fast, aggressive, and
-              exciting football.
-            </li>
-          </ol>
+      <aside class="sidebar">
+        <div class="widget">
+          <h3>Subscribe to Newsletter</h3>
+          <p>Get the latest FM tactics and tips directly to your inbox!</p>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
         </div>
-      </article>
-    </main>
+        <div class="widget">
+          <h3>Popular Categories</h3>
+          <ul class="categories">
+            <li><a href="tactics.html">Tactics</a></li>
+            <li><a href="wonderkids.html">Wonderkids</a></li>
+            <li><a href="teamguides.html">Team Guides</a></li>
+            <li><a href="#">Training</a></li>
+            <li><a href="#">Scouting</a></li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitch"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+      </aside>
+    </div>
 
     <footer>
       <div class="footer-content">
