@@ -349,7 +349,7 @@ nav a.active::after {
   margin-top: 30px;
 }
 
-/* Sidebar */
+/* Sidebar Styling */
 .sidebar {
   grid-area: sidebar;
 }
@@ -418,7 +418,7 @@ nav a.active::after {
   transform: translateY(-3px);
 }
 
-/* Footer */
+/* Footer Styling */
 footer {
   grid-area: footer;
   background: var(--primary-color);
