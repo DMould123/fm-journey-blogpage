@@ -10,6 +10,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link
+      rel="preload"
+      as="image"
+      href="https://res.cloudinary.com/dele4dvi9/image/upload/w_1600/v1747297439/FM/hero_wurvf5.jpg"
+      imagesrcset="https://res.cloudinary.com/dele4dvi9/image/upload/w_480/v1747297439/FM/hero_wurvf5.jpg 480w, https://res.cloudinary.com/dele4dvi9/image/upload/w_1024/v1747297439/FM/hero_wurvf5.jpg 1024w, https://res.cloudinary.com/dele4dvi9/image/upload/w_1600/v1747297439/FM/hero_wurvf5.jpg 1600w"
+      imagesizes="(max-width: 600px) 480px, (max-width: 1200px) 1024px, 1600px"
+    />
   </head>
   <body>
     <header>
@@ -42,8 +49,15 @@
 
     <section class="hero">
       <img
-        src="https://res.cloudinary.com/dele4dvi9/image/upload/v1747297439/FM/hero_wurvf5.jpg"
-        loading="lazy"
+        src="https://res.cloudinary.com/dele4dvi9/image/upload/w_1024/v1747297439/FM/hero_wurvf5.jpg"
+        srcset="
+          https://res.cloudinary.com/dele4dvi9/image/upload/w_480/v1747297439/FM/hero_wurvf5.jpg   480w,
+          https://res.cloudinary.com/dele4dvi9/image/upload/w_1024/v1747297439/FM/hero_wurvf5.jpg 1024w,
+          https://res.cloudinary.com/dele4dvi9/image/upload/w_1600/v1747297439/FM/hero_wurvf5.jpg 1600w
+        "
+        sizes="(max-width: 600px) 480px, (max-width: 1200px) 1024px, 1600px"
+        alt="Hero banner: Master tactics, wonderkids and team guides"
+        loading="eager"
       />
       <div class="hero-content">
         <h2>Master Your Football Manager Journey</h2>
@@ -276,7 +290,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 FM Journey . All rights reserved.</p>
+        <p>&copy; 2026 FM Journey . All rights reserved.</p>
         <p>
           Football Manager is a trademark of Sports Interactive Limited. This
           website is not affiliated with Sports Interactive or SEGA.
